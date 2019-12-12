@@ -82,11 +82,7 @@ public class GravatarAvatarProvider implements AvatarProvider {
       throw new RuntimeException("MD5 digest not supported - required for Gravatar");
     }
     StringBuilder url = new StringBuilder();
-    if (ssl) {
-      url.append("https://");
-    } else {
-      url.append("http://");
-    }
+    url.append("https://");
     url.append(gravatarUrl);
     url.append(hex(emailMd5));
     url.append(".jpg");
